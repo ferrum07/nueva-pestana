@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)https://ferrum07.github.io/nueva-pestana/ -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nueva pestaña</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #0f0f0f;
+    color: #e8e8e8;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+  }
+
+  .clock {
+    font-size: 72px;
+    font-weight: 200;
+    letter-spacing: -2px;
+    color: #ffffff;
+  }
+
+  .date {
+    font-size: 16px;
+    color: #888;
+    margin-top: 8px;
+    letter-spacing: 0.04em;
+    text-align: center;
+  }
+
+  .cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    width: 160px;
+    height: 160px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.04);
+    text-decoration: none;
+    color: #e8e8e8;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s, transform 0.12s;
+  }
+
+  .card:hover {
+    background: rgba(255,255,255,0.09);
+    border-color: rgba(255,255,255,0.18);
+    transform: translateY(-3px);
+  }
+
+  .card:active {
+    transform: translateY(0) scale(0.97);
+  }
+
+  .card-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.06);
+  }
+
+  .card-icon img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .card-label {
+    font-size: 14px;
+    font-weight: 400;
+    color: #aaa;
+    letter-spacing: 0.02em;
+  }
+
+  .card-name {
+    font-size: 15px;
+    font-weight: 500;
+    color: #e8e8e8;
+    margin-top: -8px;
+  }
+</style>
+</head>
+<body>
+
+<div style="display:flex; flex-direction:column; align-items:center;">
+  <div class="clock" id="clock">20:28</div>
+  <div class="date" id="date">jueves, 30 de julio de 2026</div>
+</div>
+
+<div class="cards">
+
+  <a href="https://claude.ai/" class="card">
+    <div class="card-icon">
+      <img src="https://cdn.simpleicons.org/anthropic/CC785C" alt="Claude">
+    </div>
+    <div>
+      <div class="card-name">Claude</div>
+      <div class="card-label">claude.ai</div>
+    </div>
+  </a>
+
+  <a href="https://google.com/" class="card">
+    <div class="card-icon" style="background: rgba(255,255,255,0.9);">
+      <svg width="30" height="30" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(0, 0) scale(1)">
+          <path d="M39.1 20.45c0-1.55-.14-3.03-.4-4.45H20v8.41h10.7c-.46 2.48-1.86 4.59-3.96 5.99v4.97h6.41c3.75-3.45 5.95-8.55 5.95-14.92z" fill="#4285F4"></path>
+          <path d="M20 40c5.38 0 9.9-1.78 13.2-4.83l-6.41-4.97c-1.78 1.19-4.07 1.9-6.79 1.9-5.22 0-9.64-3.52-11.22-8.25H2.17v5.13C5.45 35.59 12.2 40 20 40z" fill="#34A853"></path>
+          <path d="M8.78 23.85c-.4-1.19-.63-2.46-.63-3.85s.23-2.66.63-3.85V11.02H2.17C.79 13.76 0 16.8 0 20s.79 6.24 2.17 8.98l6.61-5.13z" fill="#FBBC05"></path>
+          <path d="M20 7.9c2.94 0 5.58 1.01 7.66 3l5.73-5.73C29.89 1.98 25.38 0 20 0 12.2 0 5.45 4.41 2.17 11.02l6.61 5.13C10.36 11.42 14.78 7.9 20 7.9z" fill="#EA4335"></path>
+        </g>
+      </svg>
+    </div>
+    <div>
+      <div class="card-name">Google</div>
+      <div class="card-label">google.com</div>
+    </div>
+  </a>
+
+  <a href="https://gemini.google.com/" class="card">
+    <div class="card-icon">
+      <img src="https://cdn.simpleicons.org/googlegemini/8E75F5" alt="Gemini">
+    </div>
+    <div>
+      <div class="card-name">Gemini</div>
+      <div class="card-label">gemini.google.com</div>
+    </div>
+  </a>
+
+  <a href="https://chat.openai.com/" class="card">
+    <div class="card-icon" style="background: #ffffff;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/960px-ChatGPT_logo.svg.png" alt="ChatGPT" style="width: 30px; height: 30px; object-fit: contain;">
+    </div>
+    <div>
+      <div class="card-name">ChatGPT</div>
+      <div class="card-label">chat.openai.com</div>
+    </div>
+  </a>
+
+  <a href="https://jellyfin.cosaspoposas.com/web/#/home" class="card">
+    <div class="card-icon">
+      <img src="https://cdn.simpleicons.org/jellyfin/00A4DC" alt="Jellyfin">
+    </div>
+    <div>
+      <div class="card-name">Jellyfin</div>
+      <div class="card-label">jellyfin.cosaspoposas.com</div>
+    </div>
+  </a>
+
+</div>
+
+<script>
+function updateClock() {
+  const now = new Date();
+  const h = String(now.getHours()).padStart(2, '0');
+  const m = String(now.getMinutes()).padStart(2, '0');
+  document.getElementById('clock').textContent = h + ':' + m;
+
+  const opts = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  document.getElementById('date').textContent = now.toLocaleDateString('es-ES', opts);
+}
+updateClock();
+setInterval(updateClock, 10000);
+</script>
+
+
+</body></html>
