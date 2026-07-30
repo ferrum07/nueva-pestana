@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
+<!-- saved from url=(0041)https://ferrum07.github.io/nueva-pestana/ -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nueva pestaña</title>
 <style>
@@ -37,6 +37,8 @@
   .cards {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .card {
@@ -73,6 +75,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background: rgba(255,255,255,0.06);
+  }
+
+  .card-icon img {
+    width: 30px;
+    height: 30px;
   }
 
   .card-label {
@@ -93,18 +101,15 @@
 <body>
 
 <div style="display:flex; flex-direction:column; align-items:center;">
-  <div class="clock" id="clock">--:--</div>
-  <div class="date" id="date"></div>
+  <div class="clock" id="clock">20:28</div>
+  <div class="date" id="date">jueves, 30 de julio de 2026</div>
 </div>
 
 <div class="cards">
 
-  <a href="https://claude.ai" class="card">
+  <a href="https://claude.ai/" class="card">
     <div class="card-icon">
-      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="40" height="40" rx="12" fill="#CC785C"/>
-        <path d="M23.82 10.63c-1.38-2.39-4.83-2.39-6.21 0l-8.39 14.52c-1.38 2.39.34 5.38 3.1 5.38h16.78c2.76 0 4.49-2.99 3.1-5.38L23.82 10.63z" fill="white" opacity="0.95"/>
-      </svg>
+      <img src="https://cdn.simpleicons.org/anthropic/CC785C" alt="Claude">
     </div>
     <div>
       <div class="card-name">Claude</div>
@@ -112,15 +117,14 @@
     </div>
   </a>
 
-  <a href="https://google.com" class="card">
-    <div class="card-icon">
-      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="40" height="40" rx="12" fill="#ffffff" opacity="0.08"/>
-        <g transform="translate(8, 8) scale(0.6)">
-          <path d="M39.1 20.45c0-1.55-.14-3.03-.4-4.45H20v8.41h10.7c-.46 2.48-1.86 4.59-3.96 5.99v4.97h6.41c3.75-3.45 5.95-8.55 5.95-14.92z" fill="#4285F4"/>
-          <path d="M20 40c5.38 0 9.9-1.78 13.2-4.83l-6.41-4.97c-1.78 1.19-4.07 1.9-6.79 1.9-5.22 0-9.64-3.52-11.22-8.25H2.17v5.13C5.45 35.59 12.2 40 20 40z" fill="#34A853"/>
-          <path d="M8.78 23.85c-.4-1.19-.63-2.46-.63-3.85s.23-2.66.63-3.85V11.02H2.17C.79 13.76 0 16.8 0 20s.79 6.24 2.17 8.98l6.61-5.13z" fill="#FBBC05"/>
-          <path d="M20 7.9c2.94 0 5.58 1.01 7.66 3l5.73-5.73C29.89 1.98 25.38 0 20 0 12.2 0 5.45 4.41 2.17 11.02l6.61 5.13C10.36 11.42 14.78 7.9 20 7.9z" fill="#EA4335"/>
+  <a href="https://google.com/" class="card">
+    <div class="card-icon" style="background: rgba(255,255,255,0.9);">
+      <svg width="30" height="30" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(0, 0) scale(1)">
+          <path d="M39.1 20.45c0-1.55-.14-3.03-.4-4.45H20v8.41h10.7c-.46 2.48-1.86 4.59-3.96 5.99v4.97h6.41c3.75-3.45 5.95-8.55 5.95-14.92z" fill="#4285F4"></path>
+          <path d="M20 40c5.38 0 9.9-1.78 13.2-4.83l-6.41-4.97c-1.78 1.19-4.07 1.9-6.79 1.9-5.22 0-9.64-3.52-11.22-8.25H2.17v5.13C5.45 35.59 12.2 40 20 40z" fill="#34A853"></path>
+          <path d="M8.78 23.85c-.4-1.19-.63-2.46-.63-3.85s.23-2.66.63-3.85V11.02H2.17C.79 13.76 0 16.8 0 20s.79 6.24 2.17 8.98l6.61-5.13z" fill="#FBBC05"></path>
+          <path d="M20 7.9c2.94 0 5.58 1.01 7.66 3l5.73-5.73C29.89 1.98 25.38 0 20 0 12.2 0 5.45 4.41 2.17 11.02l6.61 5.13C10.36 11.42 14.78 7.9 20 7.9z" fill="#EA4335"></path>
         </g>
       </svg>
     </div>
@@ -130,23 +134,35 @@
     </div>
   </a>
 
-  <a href="https://gemini.google.com" class="card">
+  <a href="https://gemini.google.com/" class="card">
     <div class="card-icon">
-      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="40" height="40" rx="12" fill="#1a1a2e"/>
-        <path d="M20 8c0 6.63-5.37 12-12 12 6.63 0 12 5.37 12 12 0-6.63 5.37-12 12-12-6.63 0-12-5.37-12-12z" fill="url(#gem_grad)"/>
-        <defs>
-          <linearGradient id="gem_grad" x1="8" y1="8" x2="32" y2="32" gradientUnits="userSpaceOnUse">
-            <stop offset="0%" stop-color="#4285F4"/>
-            <stop offset="50%" stop-color="#9B72E8"/>
-            <stop offset="100%" stop-color="#EA4335"/>
-          </linearGradient>
-        </defs>
-      </svg>
+      <img src="https://cdn.simpleicons.org/googlegemini/8E75F5" alt="Gemini">
     </div>
     <div>
       <div class="card-name">Gemini</div>
       <div class="card-label">gemini.google.com</div>
+    </div>
+  </a>
+
+  <a href="https://chat.openai.com/" class="card">
+    <div class="card-icon" style="background: #10A37F;">
+      <svg width="28" height="28" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M28.6 17.86a5.6 5.6 0 0 0-.48-4.6 5.68 5.68 0 0 0-6.12-2.72 5.6 5.6 0 0 0-9.47 2.02 5.68 5.68 0 0 0-3.79 2.75 5.6 5.6 0 0 0 .69 6.58 5.6 5.6 0 0 0 .48 4.6 5.68 5.68 0 0 0 6.12 2.72 5.59 5.59 0 0 0 4.22 1.89 5.6 5.6 0 0 0 5.25-3.91 5.68 5.68 0 0 0 3.79-2.75 5.6 5.6 0 0 0-.69-6.58zM21.63 29.1a4.2 4.2 0 0 1-2.68-.97l.13-.08 4.44-2.57a.72.72 0 0 0 .37-.63v-6.27l1.88 1.08a.07.07 0 0 1 .04.05v5.2a4.2 4.2 0 0 1-4.18 4.19zM12.6 25.14a4.18 4.18 0 0 1-.5-2.82l.13.08 4.44 2.57c.23.13.51.13.74 0l5.42-3.13v2.17a.08.08 0 0 1-.03.06l-4.49 2.6a4.2 4.2 0 0 1-5.71-1.52zm-1.17-9.72a4.2 4.2 0 0 1 2.19-1.85v5.33c0 .26.14.5.37.63l5.42 3.13-1.88 1.09a.07.07 0 0 1-.07 0l-4.49-2.6a4.2 4.2 0 0 1-1.54-5.73zM25.68 19l-5.42-3.13 1.88-1.08a.07.07 0 0 1 .07 0l4.49 2.6a4.19 4.19 0 0 1-.63 7.56v-5.33a.73.73 0 0 0-.39-.62zm1.87-2.82-.13-.08-4.44-2.57a.73.73 0 0 0-.74 0l-5.42 3.13v-2.17a.07.07 0 0 1 .03-.06l4.49-2.59a4.2 4.2 0 0 1 6.21 4.34zM15.9 21.44l-1.88-1.08a.08.08 0 0 1-.04-.06v-5.19a4.2 4.2 0 0 1 6.88-3.22l-.13.07-4.44 2.57a.72.72 0 0 0-.37.63l-.02 6.28zm1.02-2.2 2.42-1.4 2.42 1.4v2.79l-2.42 1.4-2.42-1.4v-2.79z" fill="white"></path>
+      </svg>
+    </div>
+    <div>
+      <div class="card-name">ChatGPT</div>
+      <div class="card-label">chat.openai.com</div>
+    </div>
+  </a>
+
+  <a href="http://localhost:8096/" class="card">
+    <div class="card-icon">
+      <img src="https://cdn.simpleicons.org/jellyfin/00A4DC" alt="Jellyfin">
+    </div>
+    <div>
+      <div class="card-name">Jellyfin</div>
+      <div class="card-label">localhost:8096</div>
     </div>
   </a>
 
@@ -165,5 +181,6 @@ function updateClock() {
 updateClock();
 setInterval(updateClock, 10000);
 </script>
-</body>
-</html>
+
+
+</body></html>
